@@ -1,0 +1,89 @@
+def div(*args):
+    try:
+        arg_1 = int(input('Введи число: '))
+        arg_2 = int(input('Введи второе число: '))
+        result = arg_1 / arg_2
+    except ZeroDivisionError:
+        return "На ноль делить нельзя."
+    return result
+
+
+print(f'Результат деления:{div()}')
+
+print('Задание 2')
+
+name = input('Введите ваше имя: ')
+second_name = input('Введите вашу фамилию: ')
+bth_year = (input('Введите ваш год рождения: '))
+city = input('Введите город: ')
+email = input('Введите ваш e-mail: ')
+t_number = input('Введите ваш номер телефона: ')
+
+
+def my_func():
+    return ' '.join([name, second_name, bth_year, city, email, t_number])
+
+
+print(f'Ваши данные: {my_func()}')
+
+print('Задание 3')
+
+
+def my_func(arg_1, arg_2, arg_3):
+    if arg_1 > arg_2 and arg_3 > arg_2:
+        return arg_3 + arg_1
+    elif arg_1 > arg_3 and arg_2 > arg_3:
+        return arg_1 + arg_2
+    else:
+        return arg_1 + arg_3
+
+
+print(
+    f'Два наибольших аргумента в сумме = {my_func(int(input("Введи первое число ")), int(input("Введи второе число ")), int(input("Введи третье число ")))}')
+
+print('Задание 4')
+
+
+def my_func(x, y):
+    print(x ** y)
+
+
+my_func(float(input('Введите число: ')), int(input('Введите второе число: ')))
+
+
+def my_func(a, b):
+    print(a * b)
+
+
+# Задание 5
+print('Задание 5'
+      'Введите числа через пробел')
+
+
+def my_sum():
+    sum_res = 0
+    end = False
+    while end == False:
+        res = 0
+        number = input('Введи число  или ex для выхода').split()
+        for el in range(len(number)):
+            if number[el] == 'ex':
+                end = True
+                break
+            else:
+                res = res + int(number[el])
+        sum_res = sum_res + res
+        print(f'Сумма ваших чисел равна: {sum_res}')
+
+
+my_sum()
+
+
+def int_funk(*args):
+    print(word.title())
+    return ' '.join(*args)
+
+
+word = input('Введи слова ')
+
+int_funk(word)
